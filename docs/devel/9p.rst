@@ -64,7 +64,7 @@ Topology
 The following figure shows the basic structure of the 9pfs
 implementation in QEMU.
 
-`frameless|upright=3.0 <File:9pfs_topology.png>`__
+.. image:: img/9pfs_topology.png
 
 The implementation consists of 3 modular components: 9p server, 9p
 filesystem drivers and 9p transport drivers. The 9p client on guest OS
@@ -219,7 +219,7 @@ Another important aspect to know is that once a thread leaves the scope
 of a Coroutine, then that thread is back at using its own thread-owned
 stack again.
 
-`frameless|upright=2.4 <File:Coroutines_stacks.png>`__
+.. image:: img/Coroutines_stacks.png
 
 Each coroutine instance usually handles a certain "collaborative" task,
 where "collaborative" means that individual parts of the task usually
@@ -253,7 +253,7 @@ Control Flow
 The following figure shows the control flow and relationship of Threads
 and Coroutines of the 9pfs implementation.
 
-`frameless|upright=3.5 <File:9pfs_control_flow.png>`__
+.. image::  img/9pfs_control_flow.png
 
 Getting back to 9pfs as concrete user of Coroutines, every 9P client
 request that comes in on 9P server side is a task the 9P server needs to
